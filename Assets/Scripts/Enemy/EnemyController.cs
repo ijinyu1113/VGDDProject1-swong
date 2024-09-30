@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     [Tooltip("Approximate amount of damage dealt per frame")]
     private float m_Damage;
-
+ 
     [SerializeField]
     private ParticleSystem m_DeathExplosion;
 
@@ -82,11 +82,13 @@ public class EnemyController : MonoBehaviour
         {
             ScoreManager.singleton.IncreaseScore(m_Score);
             
+            Vector3 spawnPosition = transform.position ;
             if (Random.value < m_HealthPillDropRate)
             {
-                Instantiate(m_HealthPill, transform.position, Quaternion.identity);
+                print(transform.position);
+                Instantiate(m_HealthPill, spawnPosition, Quaternion.identity);
             }
-            Instantiate(m_DeathExplosion, transform.position, Quaternion.identity);
+            Instantiate(m_DeathExplosion, spawnPosition, Quaternion.identity);
             Destroy(gameObject);
         }
     }

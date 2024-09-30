@@ -429,7 +429,12 @@ MonoBehaviour:
   - m_Name: GhostEnemy
     m_EnemyGO: {fileID: 6884825251917979565, guid: cea991c1c5207cd40a63a9409eae8208,
       type: 3}
-    m_TimeToNextSpawn: 1
+    m_TimeToNextSpawn: 2
+    m_NumberToSpawn: 0
+  - m_Name: Enemy2
+    m_EnemyGO: {fileID: 2036700819658524470, guid: ff433fbc9f5ef764189266e0ae11d42d,
+      type: 3}
+    m_TimeToNextSpawn: 2
     m_NumberToSpawn: 0
 --- !u!4 &681785082
 Transform:
